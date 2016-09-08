@@ -1,0 +1,19 @@
+#coding: utf-8
+"""
+符号化領域を求めるプログラム
+不均衡$d$を考慮して符号化領域を作成する
+"""
+
+import numpy as np
+import math
+
+def ask_trans_vertex(adjust_matrix) :
+    """隣接行列を受け取り、隣接行列から各頂点の書き込み可能領域の大きさを求める"""
+
+    #頂点数を求める
+    v_num = int(math.sqrt(adjust_matrix.size))
+    #リーフ(すべての値が0である列を探す)の書き込み可能領域から求めていく
+    
+    
+
+if __name__ == '__main__':
