@@ -20,3 +20,23 @@ def ask_focus_vertex_trans_able(focus_vertex,table,adjust_matrix) :
             ta += table[i][1]
 
     return ta
+
+def ask_leaf(adjust_matrix) :
+    """リーフである頂点を求める"""
+    v_num = int(math.sqrt(adjust_matrix.size))
+    leaf_list = []
+
+    for i in range(v_num) :
+        match_count = 0
+        for j in range(v_num) :
+            if adjust_matrix[i][j] == 0 :
+                match_count += 1
+                
+            else :
+                break
+
+        if match_count == v_num :
+            leaf_list.append(i)
+
+    return leaf_list
+
